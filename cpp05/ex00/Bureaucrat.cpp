@@ -40,15 +40,19 @@ int Bureaucrat::getGrade() const {
 }
 
 void Bureaucrat::incrementGrade() {
-    if (_grade - 1 < 1)
-        std::cout << "Bureaucrat::GradeTooHighException" << std::endl;
+    if (_grade - 1 < 1) {
+        throw MyException();
+		std::cout << "Bureaucrat::GradeTooHighException" << std::endl;
+	}
     else
         _grade -= 1;
 }
 
 void Bureaucrat::decrementGrade() {
-    if (_grade + 1 > 150)
-        std::cout << "Bureaucrat::GradeTooLowException" << std::endl;
+    if (_grade + 1 > 150) {
+		throw MyException();
+		std::cout << "Bureaucrat::GradeTooLowException" << std::endl;
+	}
     else
         _grade += 1;
 }

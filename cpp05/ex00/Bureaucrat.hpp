@@ -3,11 +3,12 @@
 
 #include <iostream>
 #include <string>
+#include <exception>
 
 class Bureaucrat {
 	private:
-		const std::string   _name;
-        int _grade;
+		const std::string	_name;
+        int	_grade;
 
 	public:
         Bureaucrat( std::string name, int grade );
@@ -19,7 +20,13 @@ class Bureaucrat {
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
+};
 
+class MyException : public std::exception {
+public:
+    virtual const char* what() const throw() {
+        return "My custom exception occurred!";
+    }
 };
 
 std::ostream& operator<<( std::ostream& os, const Bureaucrat& other );
