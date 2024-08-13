@@ -11,8 +11,8 @@ int main() {
 	Form Form2;
 
 	/* Overload */
-    std::cout << Form1;
-	std::cout << Form2;
+    std::cout << Form1 << std::endl;
+	std::cout << Form2 << std::endl;
 
 	/* Functions */
 	Alex.signForm(Form1);
