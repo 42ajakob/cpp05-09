@@ -38,7 +38,9 @@ void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 		throw GradeTooLowException();
 	}
 	else {
-		int i = std::rand() % 2; // Worst RNG I ever seen. Too bad!
+		std::srand(static_cast<unsigned int>(std::time(0)));
+		int i = std::rand() % 2;
+
 		std::cout << "some drilling noises..." << std::endl;
 		if (i == 1) {
 			std::cout << _target << " has been robotomized successfully" << std::endl;
