@@ -31,7 +31,6 @@ void identify(Base* p) {
 		std::cout << "B\n";
 	else if (dynamic_cast<C*>(p))
 		std::cout << "C\n";
-	std::cout << std::endl;
 }
 
 void identify(Base& p) {
@@ -69,5 +68,6 @@ int main() {
 	identify(ptr);
 	identify(*ptr);
 
+	delete ptr;
     return 0;
 }
