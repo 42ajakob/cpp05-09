@@ -2,6 +2,7 @@
 # define SCALARCONVERTER_HPP
 
 #include <iostream>
+#include <cstdlib>
 #include <limits>
 #include <string>
 
