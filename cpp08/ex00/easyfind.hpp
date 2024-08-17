@@ -1,27 +1,24 @@
-#ifndef ITER_HPP
-# define ITER_HPP
+#ifndef EASYFIND_HPP
+# define EASYFIND_HPP
 
 #include <iostream>
+#include <vector>
 
 template <typename T>
+bool isContainerOfInt() {
+    return std::is_same<typename T::value_type, int>::value;
+}
 
-class Array {
-	private:
-		T* _arr;
-		unsigned int _sizeArr;
+template <typename T>
+typename T::iterator easyfind( T& container, int i ) {
+	typename T::iterator it = std::find(container.begin(), container.end(), i);
 
-	public:
-		Array();
-		Array( unsigned int n );
-		Array( const Array& other );
-		Array& operator=( const Array& other );
-		~Array();
-
-		/* Functions */
-		unsigned int size() const;
-
-		/* Operators */
-		T& operator[]( unsigned int n ) const;
-};
+	if (it != container.end()) {
+			return it;
+	}
+	std::cout << "Error: the number was not found in container!" << std::endl;
+	std::cout << "Returning: 0!" << std::endl;
+	return container.end();
+}
 
 #endif

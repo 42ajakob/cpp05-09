@@ -1,7 +1,7 @@
-NAME	= serializer
+NAME	= easyfind
 CC		= c++
 CFLAGS	= -Wall -Wextra -Werror -std=c++98
-SRCS	= main.cpp Serializer.cpp
+SRCS	= main.cpp
 OBJDIR  = obj
 OBJS    = $(SRCS:%.cpp=$(OBJDIR)/%.o)
 
