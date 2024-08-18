@@ -12,5 +12,5 @@ int main() {
 	std::vector<int>::iterator it2 = easyfind(intVect, 73);
 	std::cout << "Found: " << *it2 << std::endl;
 	
-    return 0;
+	return 0;
 }
