@@ -6,11 +6,21 @@ int main() {
 
 	std::vector<int> intVect(container, container + size);
 
-	std::vector<int>::iterator it = easyfind(intVect, 42);
-	std::cout << "Found: " << *it << std::endl;
+	try {
+		std::vector<int>::iterator it = easyfind(intVect, 42);
+		std::cout << "Found: " << *it << std::endl;
+	}
+	catch (const std::exception &e ) {
+		std::cout << e.what() << "42" << std::endl;
+	}
 
-	std::vector<int>::iterator it2 = easyfind(intVect, 73);
-	std::cout << "Found: " << *it2 << std::endl;
+	try {
+		std::vector<int>::iterator it2 = easyfind(intVect, 73);
+		std::cout << "Found: " << *it2 << std::endl;
+	}
+	catch (const std::exception &e ) {
+		std::cout << e.what() << "73" << std::endl;
+	}
 	
 	return 0;
 }

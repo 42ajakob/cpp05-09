@@ -12,9 +12,7 @@ typename T::iterator easyfind( T& container, int i ) {
 	if (it != container.end()) {
 			return it;
 	}
-	std::cout << "Error: the number was not found in container!" << std::endl;
-	std::cout << "Returning: 0!" << std::endl;
-	return container.end();
+	throw std::runtime_error("Error: Failed to find ");
 }
 
 #endif

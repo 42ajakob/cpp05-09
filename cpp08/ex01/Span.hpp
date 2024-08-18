@@ -2,6 +2,7 @@
 # define SPAN_HPP
 
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include <stdexcept>
 #include <random>
