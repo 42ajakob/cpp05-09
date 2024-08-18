@@ -27,8 +27,8 @@ void ScalarConverter::toChar( double dbl ) {
 			|| dbl < std::numeric_limits<char>::min()
 			|| dbl > std::numeric_limits<char>::max())
 		std::cout << "Char: Impossible!" << std::endl;
-    else if (dbl >= 32 && dbl <= 126)
-        std::cout << "Char: " << static_cast<char>(dbl) << std::endl;
+	else if (dbl >= 32 && dbl <= 126)
+		std::cout << "Char: " << static_cast<char>(dbl) << std::endl;
 	else if (dbl >= std::numeric_limits<char>::min()
 			&& dbl <= std::numeric_limits<char>::max())
 		std::cout << "Char: Non displayable" << std::endl;
@@ -40,9 +40,9 @@ void ScalarConverter::toInt( double dbl ) {
 			|| dbl < std::numeric_limits<int>::min()
 			|| dbl > std::numeric_limits<int>::max())
 		std::cout << "Int: Impossible!" << std::endl;
-    else if (dbl >= std::numeric_limits<int>::min()
+	else if (dbl >= std::numeric_limits<int>::min()
 			&& dbl <= std::numeric_limits<int>::max())
-        std::cout << "Int: " << static_cast<int>(dbl) << std::endl;
+		std::cout << "Int: " << static_cast<int>(dbl) << std::endl;
 }
 
 void ScalarConverter::toFloat( double dbl ) {
@@ -51,8 +51,8 @@ void ScalarConverter::toFloat( double dbl ) {
 	else if (static_cast<float>(dbl) == -std::numeric_limits<float>::infinity())
 		std::cout << "Float: -inff" << std::endl;
 	else if (static_cast<float>(dbl) == std::numeric_limits<float>::infinity())
-	    std::cout << "Float: +inff" << std::endl;
-    else {
+		std::cout << "Float: +inff" << std::endl;
+	else {
 		std::cout << "Float: " << dbl;
 		if (dbl == static_cast<int>(dbl))
 			std::cout << ".0";

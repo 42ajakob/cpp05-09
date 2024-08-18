@@ -19,7 +19,7 @@ RobotomyRequestForm::RobotomyRequestForm( const RobotomyRequestForm& other ) : A
 RobotomyRequestForm& RobotomyRequestForm::operator=( const RobotomyRequestForm& other ) {
 	if (this != &other) {
 		this->~RobotomyRequestForm();
-        new (this) RobotomyRequestForm(other._target);
+		new (this) RobotomyRequestForm(other._target);
 	}
 	return *this;
 }

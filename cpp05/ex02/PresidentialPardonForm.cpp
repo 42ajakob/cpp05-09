@@ -19,7 +19,7 @@ PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& ot
 PresidentialPardonForm& PresidentialPardonForm::operator=( const PresidentialPardonForm& other ) {
 	if (this != &other) {
 		this->~PresidentialPardonForm();
-        new (this) PresidentialPardonForm(other._target);
+		new (this) PresidentialPardonForm(other._target);
 	}
 	return *this;
 }

@@ -8,23 +8,23 @@
 class Bureaucrat {
 	private:
 		const std::string	_name;
-        int	_grade;
+		int	_grade;
 
 	public:
 		/* Constructors */
 		Bureaucrat();
-        Bureaucrat( std::string name, int grade );
+		Bureaucrat( std::string name, int grade );
 		Bureaucrat( const Bureaucrat& other );
 		Bureaucrat& operator=( const Bureaucrat& other );
 		~Bureaucrat();
 
 		/* Getters */
-        std::string getName() const;
-        int getGrade() const;
+		std::string getName() const;
+		int getGrade() const;
 
 		/* Functions */
-        void incrementGrade();
-        void decrementGrade();
+		void incrementGrade();
+		void decrementGrade();
 
 		/* Exceptions */
 		class GradeTooHighException : public std::exception {

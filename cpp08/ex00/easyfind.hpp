@@ -2,12 +2,8 @@
 # define EASYFIND_HPP
 
 #include <iostream>
+#include <algorithm>
 #include <vector>
-
-template <typename T>
-bool isContainerOfInt() {
-	return std::is_same<typename T::value_type, int>::value;
-}
 
 template <typename T>
 typename T::iterator easyfind( T& container, int i ) {

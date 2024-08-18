@@ -1,8 +1,8 @@
 #include "Bureaucrat.hpp"
 
 int main() {
-    
-    Bureaucrat Steve("Steve", 1);
+
+	Bureaucrat Steve("Steve", 1);
 	Bureaucrat Alex("Alex", 150);
 
 	/* Bob */
@@ -22,26 +22,26 @@ int main() {
 	}
 
 	/* Steve */
-    try {
+	try {
 		std::cout << "Steve: Try to increment" << std::endl;
 		Steve.incrementGrade();
-    }
-    catch (std::exception & e) {
+	}
+	catch (std::exception & e) {
 		std::cout << "Steve: " << e.what() << std::endl;
-    }
+	}
 
 	/* Alex */
 	try {
 		std::cout << "Alex: Try to decrement" << std::endl;
 		Alex.decrementGrade();
-    }
-    catch (std::exception & e) {
+	}
+	catch (std::exception & e) {
 		std::cout << "Alex: " << e.what() << std::endl;
-    }
+	}
 
 	/* Overload */
-    std::cout << Steve;
+	std::cout << Steve;
 	std::cout << Alex;
 
-    return 0;
+	return 0;
 }

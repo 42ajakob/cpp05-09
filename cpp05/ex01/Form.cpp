@@ -8,11 +8,11 @@ Form::Form() : _name("Default"), _isSigned(false), _toSign(150), _toGrade(150) {
 Form::Form( std::string name, int toSign, int toGrade )
 	: _name(name), _isSigned(false), _toSign(toSign), _toGrade(toGrade) {
 	if (toSign < 1 || toGrade < 1) {
-        throw GradeTooHighException();
-    }
+		throw GradeTooHighException();
+	}
 	else if (toSign > 150 || toGrade > 150) {
-        throw GradeTooLowException();
-    }
+		throw GradeTooLowException();
+	}
 }
 
 Form::Form( const Form& other ) : _name(other._name), _isSigned(false), _toSign(other._toSign), _toGrade(other._toGrade) {
@@ -21,7 +21,7 @@ Form::Form( const Form& other ) : _name(other._name), _isSigned(false), _toSign(
 Form& Form::operator=( const Form& other ) {
 	if (this != &other) {
 		this->~Form();
-        new (this) Form(other._name, other._toSign, other._toGrade);
+		new (this) Form(other._name, other._toSign, other._toGrade);
 	}
 	return *this;
 }
@@ -33,7 +33,7 @@ Form::~Form() {
 /* Getters */
 
 std::string Form::getName() const {
-    return _name;
+	return _name;
 }
 
 bool Form::getIsSigned() const {
@@ -41,11 +41,11 @@ bool Form::getIsSigned() const {
 }
 
 int Form::getToSign() const {
-    return _toSign;
+	return _toSign;
 }
 
 int Form::getToGrade() const {
-    return _toGrade;
+	return _toGrade;
 }
 
 
@@ -73,9 +73,9 @@ const char* Form::GradeTooLowException::what() const throw() {
 /* Overload */
 
 std::ostream& operator<<( std::ostream& os, const Form& other ) {
-    os << "Form: " << other.getName()
+	os << "Form: " << other.getName()
 	<< ", signed " << other.getIsSigned()
 	<< ", to sign " << other.getToSign()
 	<< ", to grade " << other.getToGrade();
-    return os;
+	return os;
 }

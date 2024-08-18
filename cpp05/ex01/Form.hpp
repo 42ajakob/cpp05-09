@@ -10,19 +10,19 @@ class Form {
 		const std::string	_name;
 		bool _isSigned;
 		const int _toSign;
-        const int	_toGrade;
+		const int	_toGrade;
 
 	public:
 		/* Constructors */
 		Form();
-        Form( std::string name, int toSign, int toGrade );
+		Form( std::string name, int toSign, int toGrade );
 		Form( const Form& other );
 		Form& operator=( const Form& other );
 		~Form();
 
 		/* Getters */
-        std::string getName() const;
-        bool getIsSigned() const;
+		std::string getName() const;
+		bool getIsSigned() const;
 		int	getToSign() const;
 		int getToGrade() const;
 

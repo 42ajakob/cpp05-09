@@ -17,7 +17,7 @@ ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& other
 ShrubberyCreationForm& ShrubberyCreationForm::operator=( const ShrubberyCreationForm& other ) {
 	if (this != &other) {
 		this->~ShrubberyCreationForm();
-        new (this) ShrubberyCreationForm(other._target);
+		new (this) ShrubberyCreationForm(other._target);
 	}
 	return *this;
 }
@@ -38,7 +38,7 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 	else {
 		std::ofstream outfile((_target + "_shrubbery").c_str());
 		if (outfile.is_open()) {
-    	    outfile << "     ccee88oo          " << std::endl;
+			outfile << "     ccee88oo          " << std::endl;
 			outfile << "  C8O8O8Q8PoOb o8oo    " << std::endl;
 			outfile << " dOB69QO8PdUOpugoO9bD  " << std::endl;
 			outfile << "CgggbU8OU qOp qOdoUOdcb" << std::endl;
@@ -49,10 +49,10 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const {
 			outfile << "         |||\\/        " << std::endl;
 			outfile << "         |||||         " << std::endl;
 			outfile << "  .....\\//||||\\....  " << std::endl;
-    	    outfile.close();
+			outfile.close();
 		}
 		else {
-        	std::cout << "Unable to open file." << std::endl;
-    	}
+			std::cout << "Unable to open file." << std::endl;
+		}
 	}
 }

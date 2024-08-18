@@ -8,6 +8,6 @@ DOUBLE_MIN = -1.234e+308, DOUBLE_MAX = 1.234e+308
 */
 int main(int argc, char **argv) {
 	if (argc == 2 && argv[1] != NULL) 
-    	ScalarConverter::convert(argv[1]);
-    return 0;
+		ScalarConverter::convert(argv[1]);
+	return 0;
 }

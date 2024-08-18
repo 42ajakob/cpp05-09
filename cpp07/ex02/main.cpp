@@ -25,8 +25,8 @@ int main( void ) {
 	}
 
 	try {
-        intArr[10] = 5;
-    } catch ( std::exception &e ) {
-        std::cerr << "Error: operator[] failed!" << std::endl;
-    }
+		intArr[10] = 5;
+	} catch ( std::exception &e ) {
+		std::cerr << "Error: operator[] failed!" << std::endl;
+	}
 }
