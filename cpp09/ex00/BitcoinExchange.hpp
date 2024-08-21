@@ -35,7 +35,6 @@ class BitcoinExchange {
 		static bool	keyFormat( std::string line );
 		bool setValues( bool DVM, std::string line );
 		static std::tm stringToDate(const std::string& dateStr);
-		static int dateDifference(const std::tm& date1, const std::tm& date2);
 		bool isClosest(std::map<std::string, double>::iterator it);
 		int searchPocketValue();
 

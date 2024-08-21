@@ -130,27 +130,18 @@ std::tm BitcoinExchange::stringToDate(const std::string& dateStr) {
     return tm;
 }
 
-int BitcoinExchange::dateDifference(const std::tm& date1, const std::tm& date2) {
-    auto tp1 = std::chrono::system_clock::from_time_t(std::mktime(&const_cast<std::tm&>(date1)));
-    auto tp2 = std::chrono::system_clock::from_time_t(std::mktime(&const_cast<std::tm&>(date2)));
-    auto duration = std::chrono::duration_cast<std::chrono::hours>(tp2 - tp1).count();
-    return std::abs(duration / 24);
-}
-
 bool BitcoinExchange::isClosest(std::map<std::string, double>::iterator it) {
 	std::tm check = stringToDate(userDVM.begin()->first);
 	std::tm first = stringToDate(it->first);
 	std::tm second = stringToDate(std::next(it)->first);
 
-	int diff1 = dateDifference(check, first);
-	int diff2 = dateDifference(check, second);
-
 	std::time_t check_time = std::mktime(&check);
+	std::time_t first_time = std::mktime(&first);
 	std::time_t second_time = std::mktime(&second);
 
 	if (second_time > check_time)
 		return true;
-	if (diff1 > diff2)
+	if (second_time - check_time > first_time - check_time)
 		return false;
 	return true;
 }
